@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEMANA7COMPLETO.Regristro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                 <Label Text=""
+                   TextColor="Brown"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Label Text="Nombre: "/>
+                <Entry Placeholder="Introduce tu Nombre" x:Name="Nombre"/>
+                <Label Text="Usuario: "/>
+                <Entry Placeholder="Introduce tu Usuario " Keyboard="Email" x:Name="Usuario"/>
+                <Label Text="Contrasena: "/>
+                <Entry Placeholder="Introduce tu Contraseña " IsPassword="True" x:Name="Contrasenia"/>
+                <Button x:Name="btn_agregar" Text="Agregar" Clicked="btn_agregar_Clicked" BackgroundColor="Azure"></Button>
+            </StackLayout>
+        </ScrollView>
+       </ContentPage.Content>
+</ContentPage>

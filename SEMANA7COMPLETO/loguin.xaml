@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEMANA7COMPLETO.loguin">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Sistema de Regristro de Citas " HorizontalOptions="Center"/>
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                    <Label Text="ingrese el usuario" Grid.Row="0" Grid.Column="0" FontSize="16" HorizontalOptions="Center"/>
+
+                    <Entry x:Name="txtUsuario" Placeholder="Ingrese  su Usuario" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Ingrese la contraseña" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="txtContrasena" Placeholder="Ingrese su contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1">
+                    </Entry>
+                </Grid>
+
+                <Button x:Name="btnIniciar" Text="Iniciar secion" Clicked="btnIniciar_Clicked"/>
+            <Button x:Name="btnRegrisgtar" Text="Regristar" Clicked="btnRegrisgtar_Clicked"/>
+                
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
