@@ -36,7 +36,7 @@ namespace SEMANA7COMPLETO
         {
             return db.Query<Estudiante>("Update Estudiante set Nombre=?, Usuario=?,contrsena=? where id = ?", nombre, usuario, contrasena, id);
         }
-
+        //
         private void btnActualizar_Clicked(object sender, EventArgs e)
         {
 
