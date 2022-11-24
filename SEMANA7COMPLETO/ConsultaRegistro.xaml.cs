@@ -22,26 +22,35 @@ namespace SEMANA7COMPLETO
             InitializeComponent();
             _conn = DependencyService.Get<Database>().GetConnection();
             NavigationPage.SetHasBackButton(this, false);
+            Datos();
         }
 
-       protected async override void OnAppearing()
+        public async void Datos()
         {
-            var ResulRegistros = await _conn.Table<Estudiante>().ToListAsync();
-            _TablaEstudiante = new ObservableCollection<Estudiante>(ResulRegistros);
-            ListaUsuarios.ItemsSource = _TablaEstudiante;
-            base.OnAppearing();
+            var Resultado = await _conn.Table<Estudiante>().ToListAsync();
+            _TablaEstudiante = new ObservableCollection<Estudiante>(Resultado);
+            ListadoEstudiante.ItemsSource = _TablaEstudiante;
+
+
+
+
+
         }
-        void OnSelection(object sender,SelectedItemChangedEventArgs e)
+
+        private void ListadoEstudiante_ItemSelected(object sender,SelectedItemChangedEventArgs e)
         {
-            var Obj = (Estudiante)e.SelectedItem;
-            var item = Obj.Id.ToString();
-            int ID = Convert.ToInt32(item);
+            var obj = (Estudiante)e.SelectedItem;
+            var item = obj.Id.ToString();
+            var IdSeleccionado = Convert.ToInt32(item);
+
+
+
+
             try
             {
-               // Navigation.PushAsync(new elemento(ID));
-
+                Navigation.PushAsync(new elemento(IdSeleccionado));
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }

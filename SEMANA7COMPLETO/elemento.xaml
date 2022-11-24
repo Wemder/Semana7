@@ -4,10 +4,14 @@
              x:Class="SEMANA7COMPLETO.elemento">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text=""
-                   TextColor="Brown"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Eliminar/ Actualizar Estudiantes" />
+
+            <Entry x:Name="txtNombre" Placeholder="Nombre"/>
+            <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
+            <Entry x:Name="txtContrasena" Placeholder="Contrasena"/>
+
+            <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" />
+            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

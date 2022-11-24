@@ -4,14 +4,23 @@
              x:Class="SEMANA7COMPLETO.ConsultaRegistro">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListaUsuarios" ItemSelected="OnSelection">
+            <Label Text="Lista de Estudiante!" />
+
+            <ListView x:Name="ListadoEstudiante" ItemSelected="ListadoEstudiante_ItemSelected" >
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Nombre}" Detail="{Binding Usuario}"></TextCell>
+
+                        <TextCell Text="{Binding Nombre}"  Detail="{Binding Usuario}"/>
+
+
+
+
                     </DataTemplate>
                 </ListView.ItemTemplate>
-
             </ListView>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
